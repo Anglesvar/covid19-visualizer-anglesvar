@@ -7,6 +7,11 @@ import { AuthGuardService } from './auth-guard.service';
 
 const routes: Routes = [
   {
+    path:'',
+    pathMatch:'prefix',
+    redirectTo: "login"
+  },
+  {
     path: "login",
     component: LoginComponent
   },
