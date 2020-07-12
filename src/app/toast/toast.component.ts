@@ -19,7 +19,9 @@ import {ToastService} from '../toast.service';
       <ng-template #text>{{ toast.textOrTpl }}</ng-template>
     </ngb-toast>
   `,
-  host: {'[class.ngb-toasts]': 'true'}
+  host: {'[class.ngb-toasts]': 'true'},
+  styleUrls: ['./toast.component.css']
+
 })
 export class ToastComponent {
   constructor(public toastService: ToastService) {}

@@ -33,10 +33,17 @@ export class LoginComponent implements OnInit {
       this.toast.show('Login Successful', {
         classname: 'bg-success text-light',
         delay: 2000,
-        autohide: true
+        autohide: true,
       });
       this.route.navigateByUrl("/dashboard");
+      return;
+    },(err)=>{
+    this.toast.show('Email and Password donot match..', {
+      classname: 'bg-danger bg-outline-danger text-light',
+      delay: 2000,
+      autohide: true,
     });
+  });
     
   }
 

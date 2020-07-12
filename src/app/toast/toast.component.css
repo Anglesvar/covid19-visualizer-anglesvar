@@ -1,0 +1,19 @@
+.text-light {
+    position: relative;
+    right: 130% !important;
+    top: 30px !important;
+}
+
+.toast-body {
+    position: absolute;
+    float: right;
+    top: 300px !important;
+    z-index: 99;
+}
+
+.bg-outline-danger {
+    border: 2px solid tomato;
+    border-radius: 10px;
+    color: white !important;
+    background: rgb(243, 96, 96) !important;
+}

@@ -704,3 +704,11 @@
         font-weight: 900;
         font-size: 18px!important;
     }
+    
+    .logout {
+        float: right;
+        display: inline;
+        position: relative;
+        top: -30px;
+        right: 10px;
+    }

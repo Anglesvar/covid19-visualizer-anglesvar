@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CovidService } from "../covid.service";
 import { Router } from '@angular/router';
+import { ToastService } from '../toast.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -14,13 +15,12 @@ export class DashboardComponent implements OnInit {
   totalCases;
   activeCases;
   currentStateData;
-  constructor(private covid: CovidService, private route: Router) { }
+  constructor(private covid: CovidService, private route: Router, public toast: ToastService) { }
 
   ngOnInit(): void {
     // if(!localStorage.getItem("user-token")) 
     //   this.route.navigateByUrl("/login");
-    console.log(localStorage.getItem('user-token'));
-
+    
     this.data = this.covid.getDataStateWise().subscribe(res=>{
       console.log(res.data.statewise);
       this.stateWise = res.data.statewise;
@@ -44,6 +44,15 @@ export class DashboardComponent implements OnInit {
       } else {
         data['show'] = true;
       }
+    }
+
+    logout(){
+      localStorage.removeItem("user-token");
+      this.toast.show('Logout Successful', {
+        classname: 'bg-info text-light',
+        delay: 2000,
+        autohide: true
+      });      this.route.navigateByUrl("/login");
     }
 
 }
