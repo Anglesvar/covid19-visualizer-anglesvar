@@ -1,0 +1,37 @@
+<div class="district-heading">
+    <th>
+        <div class="heading-content">
+            <abbr class="dist" title="District" style="pointer-events: none;color: aliceblue;">District</abbr>
+        </div>
+    </th>
+    <th>
+        <div class="heading-content">
+            <abbr class="confirmed" title="Confirmed">Confirmed</abbr>
+        </div>
+    </th>
+    <th>
+        <div class="heading-content">
+            <abbr class="deaths" title="Deaths" style="color: tomato;">Deceased</abbr>
+        </div>
+    </th>
+    <th>
+        <div class="heading-content">
+            <abbr class="recovered" title="recovered" style="color: rgb(117, 194, 117);">Recovered</abbr>
+        </div>
+    </th>
+</div>
+
+<div *ngFor="let data of districtData|keyvalue" class="district tableStyle">
+
+    <td class="col-md-6 district-name" style="font-weight: 600;"> {{data.value.stateName}}</td>
+    <td class="col-md-6 " style="position: relative;left: -60px;">
+        {{data.value.confirmed}}
+    </td>
+    <td class="col-md-6 ">
+        {{data.value.deceased}}
+    </td>
+    <td class="col-md-6" style="position: absolute;text-align: center;right: 20px;">
+        {{data.value.recovered}}
+    </td>
+
+</div>
