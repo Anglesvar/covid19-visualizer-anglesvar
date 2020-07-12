@@ -16,7 +16,8 @@ import { ToastComponent } from './toast/toast.component';
 import { TimeSeriesComponent } from './time-series/time-series.component';
 import { DistrictComponent } from './district/district.component';
 import { PieComponent } from './pie/pie.component';
-
+import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
+import { MomentModule } from 'ngx-moment';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PieComponent } from './pie/pie.component';
     ToastComponent,
     TimeSeriesComponent,
     DistrictComponent,
-    PieComponent
+    PieComponent,
+    DoughnutChartComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import { PieComponent } from './pie/pie.component';
     HttpClientModule,
     ReactiveFormsModule,
     ChartsModule,
-    NgbModule
+    NgbModule,
+    MomentModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CovidService } from "../covid.service";
 import { Router } from '@angular/router';
 import { ToastService } from '../toast.service';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -13,8 +14,12 @@ export class DashboardComponent implements OnInit {
   district;
   districtData;
   totalCases;
-  activeCases;
+  activeCases=0;
+  confirmedCases=0;
+  recoveredCases=0;
+  deaths=0;
   currentStateData;
+  
   constructor(private covid: CovidService, private route: Router, public toast: ToastService) { }
 
   ngOnInit(): void {
@@ -27,6 +32,9 @@ export class DashboardComponent implements OnInit {
     });
     this.covid.getTotalCase().subscribe(data=>{
       this.totalCases = data;
+      this.confirmedCases = data.confirmed.value
+      this.recoveredCases = data.recovered.value;
+      this.deaths = data.deaths.value
       this.activeCases = (data.confirmed.value - data.deaths.value - data.recovered.value)
     })
   }

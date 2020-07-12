@@ -24,9 +24,7 @@ export class CovidService {
   getTotalCase():Observable<any>{
     return this.http.get(this.urlTotalCases);
   }
- getDailyCaseStatus(): Observable<any> {
-    return this.http.get(this.url_dailycases)
-  }
+  
   getData(): Observable<any>{
     return this.http.get(this.url_general);
   }
