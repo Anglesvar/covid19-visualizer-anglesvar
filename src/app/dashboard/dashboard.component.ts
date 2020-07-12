@@ -17,8 +17,10 @@ export class DashboardComponent implements OnInit {
   constructor(private covid: CovidService, private route: Router) { }
 
   ngOnInit(): void {
-    if(!localStorage.getItem("user-token")) 
-      this.route.navigateByUrl("/login");
+    // if(!localStorage.getItem("user-token")) 
+    //   this.route.navigateByUrl("/login");
+    console.log(localStorage.getItem('user-token'));
+
     this.data = this.covid.getDataStateWise().subscribe(res=>{
       console.log(res.data.statewise);
       this.stateWise = res.data.statewise;
