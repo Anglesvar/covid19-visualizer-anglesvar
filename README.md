@@ -15,6 +15,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### [Live Demo](https://covid19-visualizer-anglesvar.netlify.app)
 
+
+![ScreenShot](https://user-images.githubusercontent.com/34555438/89687390-c922c700-d91d-11ea-9bf4-eb0d04c2407d.png)
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
