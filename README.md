@@ -1,6 +1,19 @@
+# This is an open-source project, Any body can fork it and use it.
+Note: Create your own APIs from [backendless.com](https://www.backendless.com) and replace your APIs with the ones in login and register component.
+
 # Covid19
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
+
+# Initial Steps
+
+1. Clone the project into your local
+2. Open the folder in VSCode/WebStorm or in any Editor.
+3. Run `npm install` to install all the required packages.
+4. Run `ng serve` or `npm install`.
+5. Open `https://localhost:4200` to view the output.
+
+### [Live Demo](https://covid19-visualizer-anglesvar.netlify.app)
 
 ## Development server
 
